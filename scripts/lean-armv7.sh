@@ -84,9 +84,6 @@ git clone -b lede https://github.com/pymumu/luci-app-smartdns package/luci-app-s
 # Add luci-theme-edge
 git clone -b 18.06 --depth=1 https://github.com/garypang13/luci-theme-edge package/luci-theme-edge
 
-# Disable goproxy in some packages
-sed -i 's/default y/default n/g' package/lean/UnblockNeteaseMusicGo/Makefile
-
 # passwall/vssr默认子项目全选
 sed -i 's/default n/default y/g' package/openwrt-passwall/luci-app-passwall/Makefile
 sed -i 's/default n/default y/g' package/jerrykuku/luci-app-vssr/Makefile
