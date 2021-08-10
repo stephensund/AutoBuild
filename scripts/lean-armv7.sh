@@ -84,10 +84,6 @@ git clone -b lede https://github.com/pymumu/luci-app-smartdns package/luci-app-s
 # Add luci-theme-edge
 git clone -b 18.06 --depth=1 https://github.com/garypang13/luci-theme-edge package/luci-theme-edge
 
-# passwall/vssr默认子项目全选
-sed -i 's/default n/default y/g' package/openwrt-passwall/luci-app-passwall/Makefile
-sed -i 's/default n/default y/g' package/jerrykuku/luci-app-vssr/Makefile
-
 
 # preset cores for openclash
 mkdir -p files/etc/openclash/core
