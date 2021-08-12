@@ -10,6 +10,10 @@ sed -i 's/DEPENDS.*/& \+kmod-tun +libcap-bin/g'  feeds/luci/applications/luci-ap
 # Add luci-theme-edge
 git clone -b 18.06 --depth=1 https://github.com/garypang13/luci-theme-edge package/luci-theme-edge
 
+# Add latest smartdns package
+rm -rf feeds/packages/net/smartdns
+svn co https://github.com/Lienol/openwrt-packages/trunk/net/smartdns package/smartdns
+
 # preset cores for openclash
 mkdir -p files/etc/openclash/core
 open_clash_main_url=$(curl -sL https://api.github.com/repos/vernesong/OpenClash/releases/tags/Clash | grep /clash-linux-armv7 | sed 's/.*url\": \"//g' | sed 's/\"//g')

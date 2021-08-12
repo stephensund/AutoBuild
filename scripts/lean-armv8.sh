@@ -83,7 +83,9 @@ git clone --depth=1 https://github.com/SuLingGG/luci-app-diskman package/luci-ap
 mkdir package/parted
 cp package/luci-app-diskman/Parted.Makefile package/parted/Makefile
 
-# Add smartdns
+# Add latest smartdns package
+rm -rf feeds/packages/net/smartdns
+svn co https://github.com/Lienol/openwrt-packages/trunk/net/smartdns package/smartdns
 git clone -b lede https://github.com/pymumu/luci-app-smartdns package/luci-app-smartdns
 
 # preset cores for openclash
