@@ -74,12 +74,6 @@ git clone --depth=1 https://github.com/tty228/luci-app-serverchan package/luci-a
 # Add adguardhome
 git clone https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
 
-# Use Lienol's https-dns-proxy package
-pushd feeds/packages/net
-rm -rf https-dns-proxy
-svn co https://github.com/Lienol/openwrt-packages/trunk/net/https-dns-proxy package/https-dns-proxy
-popd
-
 # Add luci-theme-edge
 git clone -b 18.06 --depth=1 https://github.com/garypang13/luci-theme-edge package/luci-theme-edge
 
