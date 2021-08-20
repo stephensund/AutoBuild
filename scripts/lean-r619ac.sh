@@ -4,6 +4,9 @@ sed -i 's/192.168.1.1/192.168.2.11/g' package/base-files/files/bin/config_genera
 # 调整CFLAGS等级为O3
 sed -i 's/Os/O3/g' include/target.mk
 
+# 默认开启 Irqbalance
+sed -i "s/enabled '0'/enabled '1'/g" feeds/packages/utils/irqbalance/files/irqbalance.config
+
 # Mod zzz-default-settings
 pushd package/lean/default-settings/files
 sed -i '/http/d' zzz-default-settings
