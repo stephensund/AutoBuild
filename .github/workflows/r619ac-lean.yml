@@ -26,7 +26,7 @@ env:
   REPO_BRANCH: master
   FEEDS_CONF: feeds/lean.conf.default
   CONFIG_FILE: configs/r619ac-lean.config
-  DIY_SH: scripts/lean-armv7.sh
+  DIY_SH: scripts/lean-r619ac.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false

@@ -26,7 +26,7 @@ env:
   REPO_BRANCH: master
   FEEDS_CONF: feeds/lean.conf.default
   CONFIG_FILE: configs/acrh17-lean.config
-  DIY_SH: scripts/lean-armv7.sh
+  DIY_SH: scripts/lean-acrh17.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
