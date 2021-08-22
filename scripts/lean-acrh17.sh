@@ -30,12 +30,6 @@ popd
 # Add luci-app-netspeedtest
 git clone https://github.com/sirpdboy/NetSpeedTest package/NetSpeedTest
 
-# Add luci-app-dnsfilter
-#git clone https://github.com/garypang13/luci-app-dnsfilter package/luci-app-dnsfilter
-
-# Add luci-app-godproxy
-#git clone https://github.com/project-lede/luci-app-godproxy package/luci-app-godproxy
-
 # Add Jerrykuku's packages
 rm -rf package/lean/luci-theme-argon
 git clone https://github.com/jerrykuku/lua-maxminddb package/jerrykuku/lua-maxminddb
@@ -55,11 +49,6 @@ rm -rf package/lean/simple-obfs
 rm -rf package/lean/trojan
 rm -rf package/lean/v2ray-plugin
 git clone https://github.com/xiaorouji/openwrt-passwall package/openwrt-passwall
-
-# Add bypass
-#git clone --depth=1 https://github.com/garypang13/luci-app-bypass package/luci-app-bypass
-#git clone https://github.com/garypang13/smartdns-le package/smartdns-le
-#sed -i 's/default n/default y/g' package/luci-app-bypass/Makefile
 
 # Add OpenClash
 git clone --depth=1 -b master https://github.com/vernesong/OpenClash package/openclash
@@ -88,6 +77,12 @@ git clone -b lede https://github.com/pymumu/luci-app-smartdns package/luci-app-s
 
 # Add luci-theme-edge
 git clone -b 18.06 --depth=1 https://github.com/garypang13/luci-theme-edge package/luci-theme-edge
+
+# Add latest https-dns-proxy package
+rm -rf feeds/luci/applications/luci-app-https-dns-proxy
+rm -rf feeds/packages/net/https-dns-proxy
+svn co https://github.com/immortalwrt/luci/branches/openwrt-18.06-k5.4/applications/luci-app-https-dns-proxy feeds/luci/applications/luci-app-https-dns-proxy
+svn co https://github.com/immortalwrt/packages/branches/openwrt-18.06/net/https-dns-proxy feeds/packages/net/https-dns-proxy
 
 
 # preset cores for openclash
