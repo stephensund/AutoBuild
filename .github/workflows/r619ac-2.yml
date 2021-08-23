@@ -25,8 +25,8 @@ env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
   FEEDS_CONF: feeds/lean.conf.default
-  CONFIG_FILE: configs/r619ac-lean.config
-  DIY_SH: scripts/lean-r619ac2.sh
+  CONFIG_FILE: configs/r619ac.config
+  DIY_SH: scripts/r619ac2.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
