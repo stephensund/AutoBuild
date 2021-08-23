@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: ARMv8-Lean
+name: N1HALL
 
 on:
   repository_dispatch:
@@ -25,8 +25,8 @@ env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
   FEEDS_CONF: feeds/feeds.conf.default
-  CONFIG_FILE: configs/armv8.config
-  DIY_SH: scripts/armv8.sh
+  CONFIG_FILE: configs/n1.config
+  DIY_SH: scripts/n1hall.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
@@ -157,7 +157,7 @@ jobs:
       id: tag
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       run: |
-        echo "::set-output name=release_tag::$(date +"%Y.%m.%d-%H%M"-ARMv8-lean)"
+        echo "::set-output name=release_tag::$(date +"%Y.%m.%d-%H%M"-N1HALL-lean)"
         touch release.txt
         [ $UPLOAD_COWTRANSFER = true ] && echo "🔗 [Cowtransfer](${{ steps.cowtransfer.outputs.url }})" >> release.txt
         [ $UPLOAD_WETRANSFER = true ] && echo "🔗 [WeTransfer](${{ steps.wetransfer.outputs.url }})" >> release.txt
