@@ -78,11 +78,6 @@ git clone -b lede https://github.com/pymumu/luci-app-smartdns package/luci-app-s
 # Add luci-theme-edge
 git clone -b 18.06 --depth=1 https://github.com/garypang13/luci-theme-edge package/luci-theme-edge
 
-# Add latest https-dns-proxy package
-rm -rf feeds/luci/applications/luci-app-https-dns-proxy
-rm -rf feeds/packages/net/https-dns-proxy
-svn co https://github.com/immortalwrt/luci/branches/openwrt-18.06-k5.4/applications/luci-app-https-dns-proxy feeds/luci/applications/luci-app-https-dns-proxy
-svn co https://github.com/immortalwrt/packages/branches/openwrt-18.06/net/https-dns-proxy feeds/packages/net/https-dns-proxy
 
 
 # preset cores for openclash
